@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR智能管理平台</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">◈</span>
+                    <span class="logo-text">HR智能平台</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active" data-page="dashboard">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">数据看板</span>
+                </li>
+                <li class="nav-item" data-page="attendance">
+                    <span class="nav-icon">⏰</span>
+                    <span class="nav-text">考勤管理</span>
+                </li>
+                <li class="nav-item" data-page="performance">
+                    <span class="nav-icon">📈</span>
+                    <span class="nav-text">绩效管理</span>
+                </li>
+                <li class="nav-item" data-page="benefits">
+                    <span class="nav-icon">🎁</span>
+                    <span class="nav-text">员工福利</span>
+                </li>
+                <li class="nav-item" data-page="business">
+                    <span class="nav-icon">🤝</span>
+                    <span class="nav-text">业务服务</span>
+                </li>
+                <li class="nav-item" data-page="employees">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">员工管理</span>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">HR</div>
+                    <div class="user-detail">
+                        <span class="user-name">HR管理员</span>
+                        <span class="user-role">HRBP</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="page-title" id="pageTitle">数据看板</div>
+                <div class="top-bar-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="搜索员工、功能..." id="globalSearch">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <div class="notification-bell" id="notificationBell">
+                        🔔
+                        <span class="badge" id="notifBadge">3</span>
+                    </div>
+                    <div class="current-date" id="currentDate"></div>
+                </div>
+            </header>
+
+            <div class="content-area" id="contentArea">
+            </div>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">标题</h3>
+                <span class="modal-close" id="modalClose">✕</span>
+            </div>
+            <div class="modal-body" id="modalBody">
+            </div>
+            <div class="modal-footer" id="modalFooter">
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/attendance.js"></script>
+    <script src="js/performance.js"></script>
+    <script src="js/benefits.js"></script>
+    <script src="js/business.js"></script>
+    <script src="js/employees.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
